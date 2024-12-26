@@ -2,6 +2,13 @@ const express = require('express')
 const app=express();
 const db = require('./db');
 
+// dot env 
+require('dotenv').config();
+const port = process.env.port || 3000;
+const mongoURL = process.env.mongo_URL;
+
+
+
 const bodyParser = require('body-parser'); 
 app.use(bodyParser.json());//req.body
 
@@ -14,6 +21,6 @@ app.get('/', function(req, res){
 const personRoutes =require('./router/personroutes')
 //use router
 app.use('/person', personRoutes); 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('listing on port 3000')   
 })
