@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost:27017/hotels');
 //     useNewURLparser:true,
 //     useUnifiedTopology:true
 // })
-
+ 
 //mongoose maintain a default connection representing the mongo connection
 const db= mongoose.connection;
 
