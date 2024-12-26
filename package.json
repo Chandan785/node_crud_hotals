@@ -1,0 +1,21 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "nodejs tutorial with Chandan",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chandan kuamr",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "html": "^1.0.0",
+    "js": "^0.1.0",
+    "json": "^11.0.0",
+    "lodash": "^4.17.21",
+    "node.js": "^0.0.1-security",
+    "nodemon": "^3.1.7"
+  }
+}
