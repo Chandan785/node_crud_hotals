@@ -17,6 +17,7 @@
     "lodash": "^4.17.21",
     "node.js": "^0.0.1-security",
     "nodemon": "^3.1.7",
-    "mongoose": "2.3.3" 
+    "mongoose": "^2.3.3",
+    "dotenv": "^16.4.7"
   }
 }
