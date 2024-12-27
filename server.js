@@ -5,7 +5,7 @@ const db = require('./db');
 // dot env 
 require('dotenv').config();
 const port = process.env.port || 3000;
-const mongoURL = process.env.mongo_URL;
+const mongoURL = process.env.mongo_URL; 
 
 
 
