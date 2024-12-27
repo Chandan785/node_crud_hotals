@@ -1,36 +1,36 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
+//define the mongoDB connection url
+ 
+//mongoose.connect('');
+//mongoose.connect('');
 
-// Define the MongoDB connection URL from the environment variable
 const mongoURL = process.env.mongoDB_URL;
 
-// Set up MongoDB connection
-mongoose.connect(mongoURL, {
-  useNewUrlParser: true,  // Corrected option key: `useNewUrlParser` is case-sensitive
-  useUnifiedTopology: true // Ensures the connection uses the latest MongoDB features
-})
-  .then(() => {
-    console.log('Connected to MongoDB server');
-  })
-  .catch((error) => {
-    console.error('Error connecting to MongoDB:', error);
-  });
+//const mongoURL='mongodb+srv://chandankumar700451:<Chandan211>@cluster0.wtsxz.mongodb.net/'
+//set up mongodb connection  
 
-// MongoDB maintains a default connection representing the MongoDB server
-const db = mongoose.connection;
+ mongoose.connect(mongoURL,{
+     useNewURLparser:true,
+     useUnifiedTopology:true
+ })
 
-// Define event listeners for database connection events
-db.on('connected', () => {
-  console.log('Successfully connected to MongoDB server');
+ 
+//mongoose maintain a default connection representing the mongo connection
+const db= mongoose.connection;
+
+//define event listener for database connection 
+db.on('connected',()=>{
+    console.log('connected to mongoDB server');
+});
+db.on('error',()=>{
+    console.log('connected to mongoDB connection error in server');
+});
+db.on('disconnected',()=>{
+    console.log('disconnected to mongoDB server');
 });
 
-db.on('error', (error) => {
-  console.log('MongoDB connection error:', error);
-});
 
-db.on('disconnected', () => {
-  console.log('Disconnected from MongoDB server');
-});
 
-// Export the db connection
-module.exports = db;
+//export the db 
+module.exports=db;
